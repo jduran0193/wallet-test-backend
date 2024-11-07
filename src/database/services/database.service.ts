@@ -45,7 +45,7 @@ export class DatabaseService {
     } catch (error) {
       return {
         success: false,
-        message: 'Error registering client',
+        message: `Error registering client: ${error}`,
         error: ErrorCode.INTERNAL_ERROR,
       };
     }
@@ -78,7 +78,7 @@ export class DatabaseService {
     } catch (error) {
       return {
         success: false,
-        message: 'Error recharging wallet',
+        message: `Error recharging wallet: ${error}`,
         error: ErrorCode.INTERNAL_ERROR,
       };
     }
@@ -112,7 +112,7 @@ export class DatabaseService {
     } catch (error) {
       return {
         success: false,
-        message: 'Error saving token',
+        message: `Error saving token: ${error}`,
         error: ErrorCode.INTERNAL_ERROR,
       };
     }
@@ -141,7 +141,7 @@ export class DatabaseService {
     } catch (error) {
       return {
         success: false,
-        message: 'Error confirming payment',
+        message: `Error confirming payment ${error}`,
         error: ErrorCode.INTERNAL_ERROR,
       };
     }
@@ -167,7 +167,7 @@ export class DatabaseService {
     } catch (error) {
       return {
         success: false,
-        message: 'Error retrieving balance',
+        message: `Error retrieving balance: ${error}`,
         error: ErrorCode.INTERNAL_ERROR,
       };
     }
@@ -206,7 +206,7 @@ export class DatabaseService {
     } catch (error) {
       return {
         success: false,
-        message: 'Error processing payment',
+        message: `Error processing payment: ${error}`,
         error: ErrorCode.INTERNAL_ERROR,
       };
     }
